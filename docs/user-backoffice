@@ -1,0 +1,133 @@
+---------------------------------------------[user login]
+Login -form
+Methods = POST
+URL:
+	http://127.0.0.1:3000/api/v1.0/user/login
+Params:
+	{"uname":"admin","pwd":"admin"}
+response:
+	jwt data!
+	eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImV4cCI6MTUyMTUxNzcxMH0.eAOvetsPO_TwYjMF3A98IAOaRYjq8dqgzjbgUt_pjv4
+---------------------------------------------------------
+-------------------------------------------------------[user access]
+user access - form
+Methods = POST
+URL:
+	http://127.0.0.1:3010/api/v1.0/new/user/access
+Params:
+ {
+        "username":"anthonyderecho",
+        "pwd":"123",
+        "firstname":"anthony",
+	    "lastname":"anthony",
+	    "email":"anthonyderecho@gmail.com",
+	    "contact":"1235678",
+        "usrrole":[11,12,13]
+    } 
+Response:
+
+
+
+{
+    "code": "200",
+    "data": [
+        {
+            "uid": [15]
+        },
+        {
+            "profile-uid": [7]
+        },
+        {
+            "permit-uid": [4,5,6]
+        }
+    ],	
+    "msg": "successfully created new user access"
+
+}
+
+
+----------------------------------------------------------user single search
+url:
+	http://127.0.0.1:3020/api/v1.0/search/single/user/access/<querystring>
+requirement: 
+	token
+Methods:GET
+response:
+	{
+    "code": "200",
+    "data": [
+        {
+            "contact": "1235678",
+            "created": 1,
+            "email": "anthonyderecho@gmail.com",
+            "firstname": "anthony",
+            "lastname": "anthony",
+            "usrid": 11,
+            "usrp_status": 1,
+            "usrpid": 3
+        }
+    ],
+    "msg": "ok"
+}
+=============================================
+response:
+	{
+    "code": "204",
+    "data": [],
+    "msg": "No content found!"
+}
+------------------------------------------------------------
+
+-----------------------------------------------------------user list	
+url:
+	http://127.0.0.1:3020/api/v1.0/user/list
+requirement: 
+	bearer token
+Methods:GET
+response:
+	{
+    "code": "200",
+    "data": [
+        {
+            "email": "anthonyderecho@gmail.com",
+            "firstname": "anthony",
+            "lastname": "anthony",
+            "usrid": 9
+        },...]
+	"msg":"ok"}
+=============================================
+response:
+	response:
+        {
+    "code": "204",
+    "data": [],
+    "msg": "No content found!"
+}
+---------------------------------------------------------------------- update
+url:http://127.0.0.1:3020/api/v1.0/edit/user/account
+requuirement:token
+methods:POST
+params: {
+       "uid":"12",
+       "data":[{
+       		"username":"toniotonio",
+       		"pwd":"1235",
+       		"firstname":"test",
+       		"lastname":"test",
+       		"email":"test@gmail.com",
+       		"contact":"7777",
+       		"usrrole":[1,2,3]
+       }]
+        
+ } 
+
+
+
+
+-------------------------------------------------------------------delete
+url:http://127.0.0.1:3020/api/v1.0/remove/user/account/17
+requirement: token and id
+Methods:GET
+
+
+--------------------------------------------------------------------------------------------------------------

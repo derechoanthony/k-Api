@@ -1,0 +1,10 @@
+http://www.rmunn.com/sqlalchemy-tutorial/tutorial.html
+    Note: ORM 
+
+
+Note: 
+
+    for date alchemy use the following syntax
+        stmt = select([usrTable.c.usrid,usrTable.c.username, usrTable.c.pwd, func.DATE_FORMAT(usrTable.c.reg_date, "%Y-%m-%d").label("date")]).\
+        where(usrTable.c.username=='admin').where(usrTable.c.username=='admxin').order_by(usrTable.c.usrid)
+d =  [dict(zip(r.keys(), r)) for r in conn.engine.execute(stmt).fetchall()]

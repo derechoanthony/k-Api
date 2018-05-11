@@ -1,0 +1,72 @@
+requirement:Token
+
+url:http://10.0.1.172:3000/api/v1.0/new/quote
+Method:POST
+requirement:token
+Note:
+	amt,price and total 
+
+params
+{
+	"date":"12/12/12",
+	"clientID":"1",
+	"amnt":"12,000.00",
+	"booking_id":"1",
+	"particulars":"the quick brown fox",
+	"pointA":["11.1222222","12.333333"],
+	"pointB":["13.0000000","14.444444"],
+	"body":[{
+				"description":"test des",
+				"qty":2,
+				"v-typecode":"Truck043",
+				"price":"3000.000",
+				"total":"6000"
+			},{
+				"description":"test des2",
+				"qty":2,
+				"v-typecode":"Truck042",
+				"price":"3000.000",
+				"total":"6000"
+			}]
+}
+--------------------------------------------------------------------------update
+url:http://10.0.1.172:3000/api/v1.0/update/quote/<querystring>
+querystring:<querystring>
+Method:POST
+requirement: token
+
+{
+	"date":"2011/11/11",
+	"clientID":"1",
+	"amnt":"12,000.00",
+	"booking_id":"1",
+	"particulars":"the quick brown foxxess",
+	"pointA":["11.1222222","12.333333"],
+	"pointB":["13.0000000","14.444444"],
+	"body":[{
+				"qtd_id":"1",
+				"description":"test des",
+				"qty":2,
+				"v-typecode":"Truck04x",
+				"price":"3000.000",
+				"total":"6000"
+			},{
+				"qtd_id":"2",
+				"description":"test des2",
+				"qty":2,
+				"v-typecode":"Truck04x",
+				"price":"3000.000",
+				"total":"6000"
+			}]
+}
+
+
+multiple search
+http://10.0.1.172:3000/api/v1.0/quote/list
+requirement:token
+Method:GET
+
+single search
+http://10.0.1.172:3000/api/v1.0/quote/single/list/3
+requirement:token
+Method:GET

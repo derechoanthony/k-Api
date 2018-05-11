@@ -1,0 +1,1 @@
+sudo  GIT_SSH_COMMAND="ssh -i /home/ojt/.ssh/id_rsa" git push -u origin quoteApi

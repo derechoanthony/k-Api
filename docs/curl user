@@ -1,0 +1,1 @@
+curl -X POST http://127.0.0.1:3000/api/v1.0/user/login -H 'Cache-Control: no-cache' -H 'Content-Type: application/json'  -d '{"uname":"toniotonio","pwd":"1235"}'

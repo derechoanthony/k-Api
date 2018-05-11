@@ -1,0 +1,15 @@
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-14-04
+
+Note: 
+	For flask installation
+
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04
+
+Note:
+	For mysql installation
+
+install:
+	pip install sqlalchemy
+	pip install mysqlclient
+	apt-get install python-mysqldb 
+	sudo apt-get install libmysqlclient-dev

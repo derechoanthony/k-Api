@@ -1,0 +1,10 @@
+ re.sub("[^\d\.]", "",amnt)
+
+
+
+>>> import re
+>>> RawPurchaseAmount
+'$10,000'
+>>> re.sub('[\$,]', '', RawPurchaseAmount)
+'10000'
+>>> 

@@ -1,0 +1,7 @@
+print(datetime.datetime.fromtimestamp(int("1521481151")).strftime('%Y-%m-%d %H:%M:%S'))
+    Note: to check if time is valid
+t = int(time.time()+300) 
+    Note: add 5 minutes to the current time
+n = datetime.datetime.now()
+unix_time = time.mktime(n.timetuple())
+    Note: to check the current date time in Unix format

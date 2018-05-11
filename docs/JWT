@@ -1,0 +1,8 @@
+http://blog.apcelent.com/json-web-token-tutorial-with-example-in-python.html
+import jwt
+encoded = jwt.encode({'some': 'payload'}, 'secret', algorithm='HS256')
+    Note: to encode jwt
+decode = jwt.decode(encoded, 'secret', algorithms=['HS256'])
+    Note: to decode
+
+

@@ -1,0 +1,32 @@
+primary requirements: TOKEN
+
+--------------------------------------------------------------------------------------------------------
+    list of end points for ratings & review
+--------------------------------------------------------------------------------------------------------
+
+rating entry
+url:http://127.0.0.1:3000/api/v1.0/insert/ratings
+method:POST 
+body:
+    {"rate":1,"vendor_id":1,"vehicle_id":2}
+
+get all list of rating by  vendor_id
+url:http://127.0.0.1:3000/api/v1.0/get/all/rating/<vendor_id>
+method:get
+
+get all list of rating  by vehicle_id
+url:http://127.0.0.1:3000/api/v1.0/get/vehicle/rating/<vehicle_id>
+method:get
+
+insert reviews
+url:http://127.0.0.1:3000/api/v1.0/insert/reviews
+method:POST
+body:
+    {"reviews":"the quick brown fox jumps over the lazy dog","vendor_id":1,"vehicle_id":2}
+
+get all list of reviews by  vendor_id
+url: http://127.0.0.1:3000/api/v1.0/get/all/review/<vendor_id>
+
+get all review by vehicle id
+url:http://127.0.0.1:3000/api/v1.0/get/vehicle/review/<vehicle_id>
+

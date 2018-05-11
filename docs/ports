@@ -1,0 +1,5 @@
+2010 - version controller http://127.0.0.1:2010/api/version/controller
+3000 - user login
+3010 - user entry
+3020 - user update
+3030 - user search

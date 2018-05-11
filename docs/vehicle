@@ -1,0 +1,64 @@
+[vehicle registration]
+http://127.0.0.1:3000/api/v1.0/new/vehicle/entry
+requirements: token
+Method:POST
+body:
+{
+	"vendor_id":1,
+	"vehicle_data":[
+		{
+			"vechicle_type":"vechicle_type",
+			"qty":20,
+			"price":"300.00",
+			"description":"long distance delivery",
+			"stockonhand": 20,
+			"images":["sdfsdfsdf","sdfsdfsdf..."]
+		}]
+}
+
+[vehicle update]
+http://127.0.0.1:3000/api/v1.0/vehicle/update/<vehicle id>
+requirements: token
+Method:POST
+body:
+{
+	"vendor_id":1,
+	"vehicle_data":[
+		{
+			"vechicle_type":"vechicle_type",
+			"qty":15,
+			"price":"300.00",
+			"description":"long distance delivery",
+			"stockonhand": 20,
+			"capacity":100,
+			"unit":"tons"
+		}]
+}
+[request for deactivation]
+http://127.0.0.1:3000/api/v1.0/vehicle/req/deactivate
+Method:POST
+body:
+	{"id":7,"particulars":"the quick brown fox jumps over the lazy dog!"}
+
+[vehicle list]
+http://127.0.0.1:3000/api/v1.0/vehicle/list
+Method:GET
+
+[vehicle deactivate list]
+http://127.0.0.1:3000/api/v1.0/vehicle/deactivate/list
+Method:GET
+
+[vehicle approved for deactivation]
+http://127.0.0.1:3000/api/v1.0/vehicle/app/deactivate
+Method:POST
+body:
+{"id":7}
+[vehicle activate]
+http://127.0.0.1:3000/api/v1.0/vehicle/activate
+Method:POST
+body:
+{"id":7}
+
+vehiclesiglelist
+http://127.0.0.1:3000/api/v1.0/vehicle/single/search/<q>
+Method:GET

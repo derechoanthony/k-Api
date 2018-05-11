@@ -1,0 +1,67 @@
+[Vendor Registration]
+http://127.0.0.1:3000/api/v1.0/new/vendor
+requirement: token
+Method: POST
+body:
+    {
+        "ContactPerson":[{"Fname":"Anthony","Lname":"Derecho"}],
+        "Address":"Unit 21 Greenbelt  Residences 37 Esperanza Street Greenbelt, Makati 1228 Barangay San Lorenzo Metro Manila, Philippines",
+        "Contact":[{
+            "mobile":"09429889010",
+            "tel":"632 200 4541"
+        }],
+        "Email":"derechoanthony@gmail.com",
+        "Payment-Type":"fullpayment",
+        "CompanyName":"LipatBahay",
+        "pwd":"data",
+        "role":"2"
+    }
+
+
+[vendor update]
+http://127.0.0.1:3000/api/v1.0/vendor/update/<vendor_id>
+requirement: token
+Method: POST
+body:
+{
+	
+		"ContactPerson":[{"Fname":"Anthony","Lname":"Durano"}],
+	"Address":"Unit 21 Greenbelt  Residences 37 Esperanza Street Greenbelt, Makati 1228 Barangay San Lorenzo Metro Manila, Philippines",
+	"Contact":[{
+		"mobile":"09429889010",
+		"tel":"632 200 4541"
+	}],
+	"Email":"derechoanthony@gmail.com",
+	"Payment-Type":"fullpayment",
+	"CompanyName":"LipatBahay"
+	
+}
+
+[vendor list] (:ALL)
+http://127.0.0.1:3000/api/v1.0/vendor/list
+requirement:token
+Method: GET
+
+[vendor list] (:SINGLE)
+http://127.0.0.1:3000/api/v1.0/vendor/list/<vendor_id>
+requirement:token
+Method: GET
+
+[vendor list of all inactive]
+
+
+
+[deactivate vendor]
+http://127.0.0.1:3000/api/v1.0/vendor/deactivate
+requirement:token
+Method:POST
+body:
+{"id":<vendor_id>}
+
+[activate vendor]
+http://127.0.0.1:3000/api/v1.0/vendor/activate
+requirement:token
+Method:POST
+body:
+{"id":<vendor_id>}
+
